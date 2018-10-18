@@ -14,6 +14,7 @@ class Register extends Component {
             errors: {}
         }
 
+        // Binding `this` within the constructor for our methods. This fixes the `setState of undefined`
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
     }
