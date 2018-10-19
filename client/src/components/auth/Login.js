@@ -1,33 +1,29 @@
 import React, { Component } from 'react'
 
 class Login extends Component {
-
   // Basic state for our Login component
   constructor() {
     super();
     // State is a object with values
     this.state = {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
       errors: {}
     };
-
-    // Binding `this` within the constructor for our methods. This fixes the `setState of undefined`
-    this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
   }
 
-  onChange(e){
-    this.setState({[e.target.name]: e.target.value});
+  // Arrow function version of setState. With this you don't need to set bind(this) in the constructor
+  onChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
   }
 
-  onSubmit(e) {
+  onSubmit = (e) => {
     e.preventDefault();
 
     const user = {
       email: this.state.email,
       password: this.state.password
-    }
+    };
 
     console.log(user);
   }
@@ -39,38 +35,37 @@ class Login extends Component {
           <div className="row">
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Log In</h1>
-              <p className="lead text-center">Sign in to your DevConnector account</p>
+              <p className="lead text-center">
+                Sign in to your DevConnector account
+              </p>
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
-                  <input 
-                    type="email" 
-                    className="form-control form-control-lg" 
-                    placeholder="Email Address" 
-                    name="email" 
+                  <input
+                    type="email"
+                    className="form-control form-control-lg"
+                    placeholder="Email Address"
+                    name="email"
                     value={this.state.email}
                     onChange={this.onChange}
                   />
                 </div>
                 <div className="form-group">
-                  <input 
-                    type="password" 
-                    className="form-control form-control-lg" 
-                    placeholder="Password" 
-                    name="password" 
+                  <input
+                    type="password"
+                    className="form-control form-control-lg"
+                    placeholder="Password"
+                    name="password"
                     value={this.state.password}
                     onChange={this.onChange}
                   />
                 </div>
-                <input 
-                  type="submit" 
-                  className="btn btn-info btn-block mt-4" 
-                />
+                <input type="submit" className="btn btn-info btn-block mt-4" />
               </form>
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
