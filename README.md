@@ -1,4 +1,4 @@
-# What does this use?
+# What does this project use?
 
 - React 16.5
 - MongoDB
