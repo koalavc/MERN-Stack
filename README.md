@@ -23,12 +23,14 @@
 
 # dotEnv File
 
-- This project has a `.env` file that is necessary.
-- The `.env` should be in the root directory.
-  <figure>
-      <img src="screenshots/env_placement.png">
-  </figure>
-- You will need to supply your own `MONGOUSER` and `MONGOPASS` in that file.
+This project has a `.env` file that is necessary.
+The `.env` should be in the root directory.
+
+<figure>
+    <img src="screenshots/env_placement.png">
+</figure>
+
+You will need to supply your own `MONGOUSER` and `MONGOPASS` in that file.
 
 Example .env file
 
