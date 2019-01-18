@@ -1,7 +1,8 @@
-const express = require('express');
+const express = require('express'),
+      mongoose = require('mongoose'),
+      passport = require('passport');
 const router = express.Router();
-const mongoose = require('mongoose');
-const passport = require('passport');
+
 
 // Post Model
 const Post = require('../../models/Post');
